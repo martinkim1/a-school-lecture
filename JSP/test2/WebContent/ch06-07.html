@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>기술정보 이력서</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>기술정보 이력서</h1>
+    <form action="showResume.jsp" method="post">
+        <table>
+            <tr>
+                <td>이름</td>
+                <td><input type="text" name="name" required></td>
+            </tr>
+            <tr>
+                <td>주민등록번호</td>
+                <td>
+                    <input type="text" name="resident1" maxlength="6" required>
+                    - 
+                    <input type="text" name="resident2" maxlength="7" required>
+                </td>
+            </tr>
+            <tr>
+                <td>학력</td>
+                <td>
+                    <input type="radio" name="education" value="고졸" checked>고졸
+                    <input type="radio" name="education" value="대졸">대졸
+                    <input type="radio" name="education" value="대학원졸">대학원졸
+                </td>
+            </tr>
+            <tr>
+                <td>전공</td>
+                <td>
+                    <select name="major">
+                        <option value="인공지능소프트웨어" selected>인공지능소프트웨어</option>
+                        <!-- 다른 전공 항목들도 추가 가능 -->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>사용가능 플랫폼</td>
+                <td>
+                    <select name="platform">
+                        <option value="Windows PC" selected>Windows PC</option>
+                        <option value="UNIX">UNIX</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="확인">
+                </td>
+                <td>
+                    <input type="submit" value="취소">                
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+
